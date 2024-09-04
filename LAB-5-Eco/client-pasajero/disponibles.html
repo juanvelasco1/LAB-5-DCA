@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="disponibles.css" />
+		<title>Passenger</title>
+		<style>
+			#buscando,
+			#cancelar {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="todoo">
+			<div class="conductores">
+				<h1 class="title">Conductores disponibles</h1>
+				<ul id="user-list"></ul>
+			</div>
+
+			<div id="buscador">
+				<h2>¿A dónde vas?</h2>
+
+				<div class="todo">
+					<div class="inputs">
+						<input type="text" placeholder="Origen" id="origen" />
+						<input type="text" placeholder="Destino" id="destino" />
+					</div>
+					<button id="solicitar">Solicitar viaje</button>
+				</div>
+			</div>
+
+			<div class="cargando">
+				<h1 id="buscando">Buscando...</h1>
+				<button id="cancelar" data-id="${}">Cancelar</button>
+			</div>
+		</div>
+
+		<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+		<script src="disponibles.js"></script>
+	</body>
+</html>
